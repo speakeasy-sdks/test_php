@@ -1,0 +1,11 @@
+# OrderCart
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              | Example                                                                  |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `amount`                                                                 | *?int*                                                                   | :heavy_minus_sign:                                                       | N/A                                                                      | Amount the buyer must pay or already paid for all units of this product. |
+| `amountPerUnit`                                                          | *?int*                                                                   | :heavy_minus_sign:                                                       | N/A                                                                      | Amount the buyer must pay or already paid for each unit of this product. |
+| `productId`                                                              | *?string*                                                                | :heavy_minus_sign:                                                       | N/A                                                                      | c5dec4fe-4192-4d38-a5bd-aa7bd6b86499                                     |
+| `units`                                                                  | *?int*                                                                   | :heavy_minus_sign:                                                       | N/A                                                                      | 3                                                                        |
