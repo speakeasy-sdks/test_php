@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 5de2514a122c5e7b9938df083447bd6c
   docVersion: 1.0.11
-  speakeasyVersion: 1.53.0
-  generationVersion: 2.58.0
+  speakeasyVersion: 1.76.1
+  generationVersion: 2.89.1
 generation:
   comments:
     disableComments: false
@@ -12,8 +12,13 @@ generation:
   sdkClassName: Updater
   singleTagPerOp: false
   tagNamespacingDisabled: false
+features:
+  php:
+    core: 2.84.0
+    globalSecurity: 2.81.1
+    globalServerURLs: 2.82.0
 php:
-  version: 1.0.0
+  version: 1.1.0
   maxMethodParams: 0
   namespace: my_workspace\Updater
   packageName: my-workspace/updater
