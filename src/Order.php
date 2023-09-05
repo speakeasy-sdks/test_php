@@ -30,7 +30,7 @@ class Order
      * @return \my_workspace\Updater\Models\Operations\ReadOrderResponse
      */
 	public function readOrder(
-        \my_workspace\Updater\Models\Operations\ReadOrderRequest $request,
+        ?\my_workspace\Updater\Models\Operations\ReadOrderRequest $request,
     ): \my_workspace\Updater\Models\Operations\ReadOrderResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -70,7 +70,7 @@ class Order
      * @return \my_workspace\Updater\Models\Operations\UpdateOrderResponse
      */
 	public function updateOrder(
-        \my_workspace\Updater\Models\Operations\UpdateOrderRequestBody $request,
+        ?\my_workspace\Updater\Models\Operations\UpdateOrderRequestBody $request,
     ): \my_workspace\Updater\Models\Operations\UpdateOrderResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -78,7 +78,9 @@ class Order
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         

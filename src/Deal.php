@@ -30,7 +30,7 @@ class Deal
      * @return \my_workspace\Updater\Models\Operations\ReadDealResponse
      */
 	public function readDeal(
-        \my_workspace\Updater\Models\Operations\ReadDealRequest $request,
+        ?\my_workspace\Updater\Models\Operations\ReadDealRequest $request,
     ): \my_workspace\Updater\Models\Operations\ReadDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -70,7 +70,7 @@ class Deal
      * @return \my_workspace\Updater\Models\Operations\UpdateDealResponse
      */
 	public function updateDeal(
-        \my_workspace\Updater\Models\Operations\UpdateDealRequestBody $request,
+        ?\my_workspace\Updater\Models\Operations\UpdateDealRequestBody $request,
     ): \my_workspace\Updater\Models\Operations\UpdateDealResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -78,7 +78,9 @@ class Deal
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, "request", "json");
-        $options = array_merge_recursive($options, $body);
+        if ($body !== null) {
+            $options = array_merge_recursive($options, $body);
+        }
         $options['headers']['Accept'] = '*/*';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
