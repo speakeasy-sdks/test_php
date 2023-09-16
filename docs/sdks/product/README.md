@@ -1,4 +1,4 @@
-# product
+# Product
 
 ## Overview
 
@@ -30,7 +30,7 @@ $sdk = Updater::builder()
 
 try {
     $request = new ReadProductRequest();
-    $request->productId = 857946;
+    $request->productId = 602763;
 
     $response = $sdk->product->readProduct($request);
 

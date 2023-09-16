@@ -64,17 +64,17 @@ try {
 ## Available Resources and Operations
 
 
-### [deal](docs/sdks/deal/README.md)
+### [Deal](docs/sdks/deal/README.md)
 
 * [readDeal](docs/sdks/deal/README.md#readdeal) - Read a deal.
 * [updateDeal](docs/sdks/deal/README.md#updatedeal) - Update a deal.
 
-### [order](docs/sdks/order/README.md)
+### [Order](docs/sdks/order/README.md)
 
 * [readOrder](docs/sdks/order/README.md#readorder) - Read a order.
 * [updateOrder](docs/sdks/order/README.md#updateorder) - Update an order.
 
-### [product](docs/sdks/product/README.md)
+### [Product](docs/sdks/product/README.md)
 
 * [readProduct](docs/sdks/product/README.md#readproduct) - Read a product.
 * [updateProduct](docs/sdks/product/README.md#updateproduct) - Update a product.

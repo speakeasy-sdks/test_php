@@ -1,4 +1,4 @@
-# order
+# Order
 
 ### Available Operations
 
@@ -85,9 +85,6 @@ try {
     $request->order->billingAddress->street = 'Rua Nova, nº5, Galega';
     $request->order->cart = [
         new OrderCart(),
-        new OrderCart(),
-        new OrderCart(),
-        new OrderCart(),
     ];
     $request->order->moreInfo = new OrderMoreInfo();
     $request->order->orderId = 'e8712454-747c-4305-8c74-76cc3acd452a';
@@ -97,7 +94,7 @@ try {
     $request->order->shippingAddress->country = 'Portugal';
     $request->order->shippingAddress->postCode = '3510-740';
     $request->order->shippingAddress->street = 'Rua Nova, nº5, Galega';
-    $request->order->state = OrderState::Complete;
+    $request->order->state = OrderState::Canceled;
     $request->origin = 'Magento';
 
     $response = $sdk->order->updateOrder($request);
