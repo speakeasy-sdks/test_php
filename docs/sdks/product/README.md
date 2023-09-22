@@ -30,7 +30,7 @@ $sdk = Updater::builder()
 
 try {
     $request = new ReadProductRequest();
-    $request->productId = 602763;
+    $request->productId = 857946;
 
     $response = $sdk->product->readProduct($request);
 

@@ -30,8 +30,6 @@ composer update
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```php
 <?php
 
@@ -47,7 +45,7 @@ $sdk = Updater::builder()
 
 try {
     $request = new ReadDealRequest();
-    $request->dealId = 548814;
+    $request->dealId = 592845;
 
     $response = $sdk->deal->readDeal($request);
 
@@ -79,6 +77,18 @@ try {
 * [readProduct](docs/sdks/product/README.md#readproduct) - Read a product.
 * [updateProduct](docs/sdks/product/README.md#updateproduct) - Update a product.
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 
