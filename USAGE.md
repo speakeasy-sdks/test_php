@@ -16,7 +16,7 @@ $sdk = Updater::builder()
 
 try {
     $request = new ReadDealRequest();
-    $request->dealId = 548814;
+    $request->dealId = 259512;
 
     $response = $sdk->deal->readDeal($request);
 

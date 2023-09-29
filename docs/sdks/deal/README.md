@@ -1,4 +1,5 @@
 # Deal
+(*deal*)
 
 ## Overview
 
@@ -30,7 +31,7 @@ $sdk = Updater::builder()
 
 try {
     $request = new ReadDealRequest();
-    $request->dealId = 715190;
+    $request->dealId = 259512;
 
     $response = $sdk->deal->readDeal($request);
 

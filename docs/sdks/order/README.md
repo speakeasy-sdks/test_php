@@ -1,4 +1,5 @@
 # Order
+(*order*)
 
 ### Available Operations
 
@@ -26,7 +27,7 @@ $sdk = Updater::builder()
 
 try {
     $request = new ReadOrderRequest();
-    $request->orderId = 844266;
+    $request->orderId = 816257;
 
     $response = $sdk->order->readOrder($request);
 
@@ -94,7 +95,7 @@ try {
     $request->order->shippingAddress->country = 'Portugal';
     $request->order->shippingAddress->postCode = '3510-740';
     $request->order->shippingAddress->street = 'Rua Nova, nº5, Galega';
-    $request->order->state = OrderState::Complete;
+    $request->order->state = OrderState::Refunded;
     $request->origin = 'Magento';
 
     $response = $sdk->order->updateOrder($request);

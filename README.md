@@ -45,7 +45,7 @@ $sdk = Updater::builder()
 
 try {
     $request = new ReadDealRequest();
-    $request->dealId = 592845;
+    $request->dealId = 259512;
 
     $response = $sdk->deal->readDeal($request);
 
@@ -62,17 +62,17 @@ try {
 ## Available Resources and Operations
 
 
-### [Deal](docs/sdks/deal/README.md)
+### [deal](docs/sdks/deal/README.md)
 
 * [readDeal](docs/sdks/deal/README.md#readdeal) - Read a deal.
 * [updateDeal](docs/sdks/deal/README.md#updatedeal) - Update a deal.
 
-### [Order](docs/sdks/order/README.md)
+### [order](docs/sdks/order/README.md)
 
 * [readOrder](docs/sdks/order/README.md#readorder) - Read a order.
 * [updateOrder](docs/sdks/order/README.md#updateorder) - Update an order.
 
-### [Product](docs/sdks/product/README.md)
+### [product](docs/sdks/product/README.md)
 
 * [readProduct](docs/sdks/product/README.md#readproduct) - Read a product.
 * [updateProduct](docs/sdks/product/README.md#updateproduct) - Update a product.
