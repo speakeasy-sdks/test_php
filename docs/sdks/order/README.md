@@ -22,7 +22,11 @@ use \my_workspace\Updater\Updater;
 use \my_workspace\Updater\Models\Shared\Security;
 use \my_workspace\Updater\Models\Operations\ReadOrderRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = Updater::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -72,7 +76,11 @@ use \my_workspace\Updater\Models\Shared\OrderCart;
 use \my_workspace\Updater\Models\Shared\OrderMoreInfo;
 use \my_workspace\Updater\Models\Shared\OrderState;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = Updater::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

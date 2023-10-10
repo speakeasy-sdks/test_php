@@ -36,11 +36,15 @@ composer update
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \my_workspace\Updater\Updater;
-use \my_workspace\Updater\Models\Shared\Security;
-use \my_workspace\Updater\Models\Operations\ReadDealRequest;
+use my_workspace\Updater\Updater;
+use my_workspace\Updater\Models\Shared\Security;
+use my_workspace\Updater\Models\Operations\ReadDealRequest;
+
+$security = new Security();
+$security->bearerAuth = '';
 
 $sdk = Updater::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -55,6 +59,7 @@ try {
 } catch (Exception $e) {
     // handle exception
 }
+
 ```
 <!-- End SDK Example Usage -->
 

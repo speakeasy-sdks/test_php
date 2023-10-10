@@ -26,7 +26,11 @@ use \my_workspace\Updater\Updater;
 use \my_workspace\Updater\Models\Shared\Security;
 use \my_workspace\Updater\Models\Operations\ReadDealRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = Updater::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -74,7 +78,11 @@ use \my_workspace\Updater\Models\Shared\Deal;
 use \my_workspace\Updater\Models\Shared\DealMoreInfo;
 use \my_workspace\Updater\Models\Shared\DealType;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = Updater::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

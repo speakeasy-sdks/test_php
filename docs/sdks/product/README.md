@@ -26,7 +26,11 @@ use \my_workspace\Updater\Updater;
 use \my_workspace\Updater\Models\Shared\Security;
 use \my_workspace\Updater\Models\Operations\ReadProductRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = Updater::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -73,7 +77,11 @@ use \my_workspace\Updater\Models\Operations\UpdateProductRequestBody;
 use \my_workspace\Updater\Models\Shared\Product;
 use \my_workspace\Updater\Models\Shared\ProductMoreInfo;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = Updater::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
