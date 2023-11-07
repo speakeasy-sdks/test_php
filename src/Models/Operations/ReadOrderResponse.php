@@ -38,16 +38,16 @@ class ReadOrderResponse
     /**
      * Successful operation
      * 
-     * @var ?\my_workspace\Updater\Models\Operations\ReadOrder200ApplicationJSON $readOrder200ApplicationJSONObject
+     * @var ?\my_workspace\Updater\Models\Operations\ReadOrderResponseBody $object
      */
 	
-    public ?ReadOrder200ApplicationJSON $readOrder200ApplicationJSONObject = null;
+    public ?ReadOrderResponseBody $object = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->readOrder200ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

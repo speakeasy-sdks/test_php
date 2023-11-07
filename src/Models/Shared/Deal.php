@@ -56,9 +56,9 @@ class Deal
     public ?int $minimumUnits = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('moreInfo')]
-    #[\JMS\Serializer\Annotation\Type('my_workspace\Updater\Models\Shared\DealMoreInfo')]
+    #[\JMS\Serializer\Annotation\Type('my_workspace\Updater\Models\Shared\MoreInfo')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?DealMoreInfo $moreInfo = null;
+    public ?MoreInfo $moreInfo = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -69,8 +69,8 @@ class Deal
     public string $productId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('type')]
-    #[\JMS\Serializer\Annotation\Type('enum<my_workspace\Updater\Models\Shared\DealType>')]
-    public DealType $type;
+    #[\JMS\Serializer\Annotation\Type('enum<my_workspace\Updater\Models\Shared\Type>')]
+    public Type $type;
     
     /**
      * Represent the a value in the units provided on type field. If type is 'percentage', this represents the percentage of the discount to apply when this deal is used. In case of type being 'percentage', this is presented in the hundreths (2005 is the same of 20.05%). In case of type being 'amount', this is presented as cents (2005 is the same of 20.05€, if the unit used is euros).
@@ -91,7 +91,7 @@ class Deal
 		$this->moreInfo = null;
 		$this->name = "";
 		$this->productId = "";
-		$this->type = \my_workspace\Updater\Models\Shared\DealType::Percentage;
+		$this->type = \my_workspace\Updater\Models\Shared\Type::Percentage;
 		$this->value = 0;
 	}
 }

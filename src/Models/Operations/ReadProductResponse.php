@@ -38,16 +38,16 @@ class ReadProductResponse
     /**
      * Successful operation
      * 
-     * @var ?\my_workspace\Updater\Models\Operations\ReadProduct200ApplicationJSON $readProduct200ApplicationJSONObject
+     * @var ?\my_workspace\Updater\Models\Operations\ReadProductResponseBody $object
      */
 	
-    public ?ReadProduct200ApplicationJSON $readProduct200ApplicationJSONObject = null;
+    public ?ReadProductResponseBody $object = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->readProduct200ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

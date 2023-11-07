@@ -1,5 +1,5 @@
 # Deal
-(*deal*)
+
 
 ## Overview
 
@@ -22,24 +22,24 @@ Get the current state of a specific deal.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \my_workspace\Updater\Updater;
-use \my_workspace\Updater\Models\Shared\Security;
-use \my_workspace\Updater\Models\Operations\ReadDealRequest;
+use \my_workspace\Updater;
+use \my_workspace\Updater\Models\Shared;
+use \my_workspace\Updater\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = Updater::builder()
+$sdk = Updater\Updater::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadDealRequest();
+    $request = new Operations\ReadDealRequest();
     $request->dealId = 259512;
 
     $response = $sdk->deal->readDeal($request);
 
-    if ($response->readDeal200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -71,32 +71,29 @@ Update the system with the current state of a specific deal.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \my_workspace\Updater\Updater;
-use \my_workspace\Updater\Models\Shared\Security;
-use \my_workspace\Updater\Models\Operations\UpdateDealRequestBody;
-use \my_workspace\Updater\Models\Shared\Deal;
-use \my_workspace\Updater\Models\Shared\DealMoreInfo;
-use \my_workspace\Updater\Models\Shared\DealType;
+use \my_workspace\Updater;
+use \my_workspace\Updater\Models\Shared;
+use \my_workspace\Updater\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = Updater::builder()
+$sdk = Updater\Updater::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateDealRequestBody();
-    $request->deal = new Deal();
+    $request = new Operations\UpdateDealRequestBody();
+    $request->deal = new Shared\Deal();
     $request->deal->dealId = '796945a0-b95a-4755-834e-59aa8946a2f5';
     $request->deal->maximumAmount = 10000;
     $request->deal->maximumUnits = 10;
     $request->deal->minimumAmount = 1000;
     $request->deal->minimumUnits = 1;
-    $request->deal->moreInfo = new DealMoreInfo();
+    $request->deal->moreInfo = new Shared\MoreInfo();
     $request->deal->name = '20% discount on bicycles';
     $request->deal->productId = 'c5dec4fe-4192-4d38-a5bd-aa7bd6b86499';
-    $request->deal->type = DealType::Percentage;
+    $request->deal->type = Shared\Type::Percentage;
     $request->deal->value = 2005;
     $request->origin = 'Magento';
 

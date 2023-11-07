@@ -10,7 +10,7 @@ namespace my_workspace\Updater\Models\Shared;
 
 
 /** Represent the current state of the cart. Local cart states must be translated to these generic states in order to all e-commerces and management software and other kinds of software to understand the current state of the cart. */
-enum OrderState: string
+enum State: string
 {
     case PendingPayment = 'pending_payment';
     case PaymentReceived = 'payment_received';

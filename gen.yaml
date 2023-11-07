@@ -2,23 +2,29 @@ configVersion: 1.0.0
 management:
   docChecksum: 5de2514a122c5e7b9938df083447bd6c
   docVersion: 1.0.11
-  speakeasyVersion: 1.97.0
-  generationVersion: 2.151.2
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
+  comments: {}
   sdkClassName: Updater
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/speakeasy-sdks/test_php.git
 features:
   php:
-    core: 2.88.2
+    core: 3.1.0
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 php:
-  version: 1.5.0
+  version: 2.0.0
+  imports:
+    option: openapi
+    paths:
+      callbacks: Models/Callbacks
+      errors: Models/Errors
+      operations: Models/Operations
+      shared: Models/Shared
+      webhooks: Models/Webhooks
+  installationURL: https://github.com/speakeasy-sdks/test_php
   maxMethodParams: 0
   namespace: my_workspace\Updater
   packageName: my-workspace/updater
+  repoSubDirectory: .

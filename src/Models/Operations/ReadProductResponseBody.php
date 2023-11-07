@@ -10,12 +10,12 @@ namespace my_workspace\Updater\Models\Operations;
 
 
 /**
- * ReadProduct200ApplicationJSON - Successful operation
+ * ReadProductResponseBody - Successful operation
  * 
  * @package my_workspace\Updater\Models\Operations
  * @access public
  */
-class ReadProduct200ApplicationJSON
+class ReadProductResponseBody
 {
     /**
      * Where the most current state of the object came from.

@@ -36,24 +36,24 @@ composer update
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use my_workspace\Updater\Updater;
-use my_workspace\Updater\Models\Shared\Security;
-use my_workspace\Updater\Models\Operations\ReadDealRequest;
+use my_workspace\Updater;
+use my_workspace\Updater\Models\Shared;
+use my_workspace\Updater\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = Updater::builder()
+$sdk = Updater\Updater::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadDealRequest();
+    $request = new Operations\ReadDealRequest();
     $request->dealId = 259512;
 
     $response = $sdk->deal->readDeal($request);
 
-    if ($response->readDeal200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -67,17 +67,17 @@ try {
 ## Available Resources and Operations
 
 
-### [deal](docs/sdks/deal/README.md)
+### [Deal](docs/sdks/deal/README.md)
 
 * [readDeal](docs/sdks/deal/README.md#readdeal) - Read a deal.
 * [updateDeal](docs/sdks/deal/README.md#updatedeal) - Update a deal.
 
-### [order](docs/sdks/order/README.md)
+### [Order](docs/sdks/order/README.md)
 
 * [readOrder](docs/sdks/order/README.md#readorder) - Read a order.
 * [updateOrder](docs/sdks/order/README.md#updateorder) - Update an order.
 
-### [product](docs/sdks/product/README.md)
+### [Product](docs/sdks/product/README.md)
 
 * [readProduct](docs/sdks/product/README.md#readproduct) - Read a product.
 * [updateProduct](docs/sdks/product/README.md#updateproduct) - Update a product.

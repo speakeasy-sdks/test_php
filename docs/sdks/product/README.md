@@ -1,5 +1,5 @@
 # Product
-(*product*)
+
 
 ## Overview
 
@@ -22,24 +22,24 @@ Get the current state of a specific product.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \my_workspace\Updater\Updater;
-use \my_workspace\Updater\Models\Shared\Security;
-use \my_workspace\Updater\Models\Operations\ReadProductRequest;
+use \my_workspace\Updater;
+use \my_workspace\Updater\Models\Shared;
+use \my_workspace\Updater\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = Updater::builder()
+$sdk = Updater\Updater::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadProductRequest();
+    $request = new Operations\ReadProductRequest();
     $request->productId = 217234;
 
     $response = $sdk->product->readProduct($request);
 
-    if ($response->readProduct200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -71,25 +71,23 @@ Update the system with the current state of a specific product.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \my_workspace\Updater\Updater;
-use \my_workspace\Updater\Models\Shared\Security;
-use \my_workspace\Updater\Models\Operations\UpdateProductRequestBody;
-use \my_workspace\Updater\Models\Shared\Product;
-use \my_workspace\Updater\Models\Shared\ProductMoreInfo;
+use \my_workspace\Updater;
+use \my_workspace\Updater\Models\Shared;
+use \my_workspace\Updater\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = Updater::builder()
+$sdk = Updater\Updater::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateProductRequestBody();
+    $request = new Operations\UpdateProductRequestBody();
     $request->origin = 'Magento';
-    $request->product = new Product();
+    $request->product = new Shared\Product();
     $request->product->amount = 10000;
-    $request->product->moreInfo = new ProductMoreInfo();
+    $request->product->moreInfo = new Shared\ProductMoreInfo();
     $request->product->name = 'Bicycle';
     $request->product->productId = 'c5dec4fe-4192-4d38-a5bd-aa7bd6b86499';
     $request->product->stock = 1000;

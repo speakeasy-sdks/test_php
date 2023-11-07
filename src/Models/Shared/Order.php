@@ -28,10 +28,10 @@ class Order
     /**
      * $cart
      * 
-     * @var array<\my_workspace\Updater\Models\Shared\OrderCart> $cart
+     * @var array<\my_workspace\Updater\Models\Shared\Cart> $cart
      */
 	#[\JMS\Serializer\Annotation\SerializedName('cart')]
-    #[\JMS\Serializer\Annotation\Type('array<my_workspace\Updater\Models\Shared\OrderCart>')]
+    #[\JMS\Serializer\Annotation\Type('array<my_workspace\Updater\Models\Shared\Cart>')]
     public array $cart;
     
 	#[\JMS\Serializer\Annotation\SerializedName('moreInfo')]
@@ -60,11 +60,11 @@ class Order
     /**
      * Represent the current state of the cart. Local cart states must be translated to these generic states in order to all e-commerces and management software and other kinds of software to understand the current state of the cart.
      * 
-     * @var \my_workspace\Updater\Models\Shared\OrderState $state
+     * @var \my_workspace\Updater\Models\Shared\State $state
      */
 	#[\JMS\Serializer\Annotation\SerializedName('state')]
-    #[\JMS\Serializer\Annotation\Type('enum<my_workspace\Updater\Models\Shared\OrderState>')]
-    public OrderState $state;
+    #[\JMS\Serializer\Annotation\Type('enum<my_workspace\Updater\Models\Shared\State>')]
+    public State $state;
     
 	public function __construct()
 	{
@@ -75,6 +75,6 @@ class Order
 		$this->orderId = "";
 		$this->originState = "";
 		$this->shippingAddress = null;
-		$this->state = \my_workspace\Updater\Models\Shared\OrderState::PendingPayment;
+		$this->state = \my_workspace\Updater\Models\Shared\State::PendingPayment;
 	}
 }

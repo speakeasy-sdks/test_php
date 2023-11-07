@@ -1,4 +1,4 @@
-# ReadOrder200ApplicationJSON
+# ReadOrderResponseBody
 
 Successful operation
 

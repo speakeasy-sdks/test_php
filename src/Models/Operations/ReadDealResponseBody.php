@@ -10,12 +10,12 @@ namespace my_workspace\Updater\Models\Operations;
 
 
 /**
- * ReadDeal200ApplicationJSON - Successful operation
+ * ReadDealResponseBody - Successful operation
  * 
  * @package my_workspace\Updater\Models\Operations
  * @access public
  */
-class ReadDeal200ApplicationJSON
+class ReadDealResponseBody
 {
 	#[\JMS\Serializer\Annotation\SerializedName('deal')]
     #[\JMS\Serializer\Annotation\Type('my_workspace\Updater\Models\Shared\Deal')]

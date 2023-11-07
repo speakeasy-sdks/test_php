@@ -1,5 +1,5 @@
 # Order
-(*order*)
+
 
 ### Available Operations
 
@@ -18,24 +18,24 @@ Get the current state of a specific order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \my_workspace\Updater\Updater;
-use \my_workspace\Updater\Models\Shared\Security;
-use \my_workspace\Updater\Models\Operations\ReadOrderRequest;
+use \my_workspace\Updater;
+use \my_workspace\Updater\Models\Shared;
+use \my_workspace\Updater\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = Updater::builder()
+$sdk = Updater\Updater::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ReadOrderRequest();
+    $request = new Operations\ReadOrderRequest();
     $request->orderId = 816257;
 
     $response = $sdk->order->readOrder($request);
 
-    if ($response->readOrder200ApplicationJSONObject !== null) {
+    if ($response->object !== null) {
         // handle response
     }
 } catch (Exception $e) {
@@ -67,43 +67,38 @@ Update the system with the current state of a specific order.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \my_workspace\Updater\Updater;
-use \my_workspace\Updater\Models\Shared\Security;
-use \my_workspace\Updater\Models\Operations\UpdateOrderRequestBody;
-use \my_workspace\Updater\Models\Shared\Order;
-use \my_workspace\Updater\Models\Shared\Address;
-use \my_workspace\Updater\Models\Shared\OrderCart;
-use \my_workspace\Updater\Models\Shared\OrderMoreInfo;
-use \my_workspace\Updater\Models\Shared\OrderState;
+use \my_workspace\Updater;
+use \my_workspace\Updater\Models\Shared;
+use \my_workspace\Updater\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = Updater::builder()
+$sdk = Updater\Updater::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new UpdateOrderRequestBody();
-    $request->order = new Order();
+    $request = new Operations\UpdateOrderRequestBody();
+    $request->order = new Shared\Order();
     $request->order->amount = 5000;
-    $request->order->billingAddress = new Address();
+    $request->order->billingAddress = new Shared\Address();
     $request->order->billingAddress->city = 'Viseu';
     $request->order->billingAddress->country = 'Portugal';
     $request->order->billingAddress->postCode = '3510-740';
     $request->order->billingAddress->street = 'Rua Nova, nº5, Galega';
     $request->order->cart = [
-        new OrderCart(),
+        new Shared\Cart(),
     ];
-    $request->order->moreInfo = new OrderMoreInfo();
+    $request->order->moreInfo = new Shared\OrderMoreInfo();
     $request->order->orderId = 'e8712454-747c-4305-8c74-76cc3acd452a';
     $request->order->originState = 'processing';
-    $request->order->shippingAddress = new Address();
+    $request->order->shippingAddress = new Shared\Address();
     $request->order->shippingAddress->city = 'Viseu';
     $request->order->shippingAddress->country = 'Portugal';
     $request->order->shippingAddress->postCode = '3510-740';
     $request->order->shippingAddress->street = 'Rua Nova, nº5, Galega';
-    $request->order->state = OrderState::Refunded;
+    $request->order->state = Shared\State::Refunded;
     $request->origin = 'Magento';
 
     $response = $sdk->order->updateOrder($request);

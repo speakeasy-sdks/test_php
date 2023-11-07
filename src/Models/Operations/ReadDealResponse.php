@@ -38,16 +38,16 @@ class ReadDealResponse
     /**
      * Successful operation
      * 
-     * @var ?\my_workspace\Updater\Models\Operations\ReadDeal200ApplicationJSON $readDeal200ApplicationJSONObject
+     * @var ?\my_workspace\Updater\Models\Operations\ReadDealResponseBody $object
      */
 	
-    public ?ReadDeal200ApplicationJSON $readDeal200ApplicationJSONObject = null;
+    public ?ReadDealResponseBody $object = null;
     
 	public function __construct()
 	{
 		$this->contentType = "";
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->readDeal200ApplicationJSONObject = null;
+		$this->object = null;
 	}
 }

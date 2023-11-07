@@ -1,4 +1,4 @@
-# ReadDeal200ApplicationJSON
+# ReadDealResponseBody
 
 Successful operation
 

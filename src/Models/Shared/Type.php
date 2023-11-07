@@ -9,9 +9,8 @@ declare(strict_types=1);
 namespace my_workspace\Updater\Models\Shared;
 
 
-class DealMoreInfo
+enum Type: string
 {
-	public function __construct()
-	{
-	}
+    case Percentage = 'percentage';
+    case Amount = 'amount';
 }

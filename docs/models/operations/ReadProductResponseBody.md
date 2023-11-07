@@ -1,4 +1,4 @@
-# ReadProduct200ApplicationJSON
+# ReadProductResponseBody
 
 Successful operation
 

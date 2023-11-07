@@ -1,4 +1,4 @@
-# DealType
+# Type
 
 
 ## Values

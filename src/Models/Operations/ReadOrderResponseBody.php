@@ -10,12 +10,12 @@ namespace my_workspace\Updater\Models\Operations;
 
 
 /**
- * ReadOrder200ApplicationJSON - Successful operation
+ * ReadOrderResponseBody - Successful operation
  * 
  * @package my_workspace\Updater\Models\Operations
  * @access public
  */
-class ReadOrder200ApplicationJSON
+class ReadOrderResponseBody
 {
 	#[\JMS\Serializer\Annotation\SerializedName('order')]
     #[\JMS\Serializer\Annotation\Type('my_workspace\Updater\Models\Shared\Order')]

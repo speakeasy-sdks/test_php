@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace my_workspace\Updater\Models\Shared;
 
 
-class OrderCart
+class Cart
 {
 	#[\JMS\Serializer\Annotation\SerializedName('amount')]
     #[\JMS\Serializer\Annotation\Type('int')]
