@@ -51,12 +51,12 @@ try {
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                  | [\my_workspace\Updater\Models\Operations\ReadProductRequest](../../models/operations/ReadProductRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| `$request`                                                                                                  | [\my_workspace\Updater\Models\Operations\ReadProductRequest](../../Models/Operations/ReadProductRequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 
 ### Response
 
-**[?\my_workspace\Updater\Models\Operations\ReadProductResponse](../../models/operations/ReadProductResponse.md)**
+**[?\my_workspace\Updater\Models\Operations\ReadProductResponse](../../Models/Operations/ReadProductResponse.md)**
 
 
 ## updateProduct
@@ -106,10 +106,10 @@ try {
 
 | Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                              | [\my_workspace\Updater\Models\Operations\UpdateProductRequestBody](../../models/operations/UpdateProductRequestBody.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| `$request`                                                                                                              | [\my_workspace\Updater\Models\Operations\UpdateProductRequestBody](../../Models/Operations/UpdateProductRequestBody.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 
 ### Response
 
-**[?\my_workspace\Updater\Models\Operations\UpdateProductResponse](../../models/operations/UpdateProductResponse.md)**
+**[?\my_workspace\Updater\Models\Operations\UpdateProductResponse](../../Models/Operations/UpdateProductResponse.md)**
 

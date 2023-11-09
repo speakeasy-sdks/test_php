@@ -47,12 +47,12 @@ try {
 
 | Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                              | [\my_workspace\Updater\Models\Operations\ReadOrderRequest](../../models/operations/ReadOrderRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| `$request`                                                                                              | [\my_workspace\Updater\Models\Operations\ReadOrderRequest](../../Models/Operations/ReadOrderRequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 
 ### Response
 
-**[?\my_workspace\Updater\Models\Operations\ReadOrderResponse](../../models/operations/ReadOrderResponse.md)**
+**[?\my_workspace\Updater\Models\Operations\ReadOrderResponse](../../Models/Operations/ReadOrderResponse.md)**
 
 
 ## updateOrder
@@ -115,10 +115,10 @@ try {
 
 | Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                          | [\my_workspace\Updater\Models\Operations\UpdateOrderRequestBody](../../models/operations/UpdateOrderRequestBody.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| `$request`                                                                                                          | [\my_workspace\Updater\Models\Operations\UpdateOrderRequestBody](../../Models/Operations/UpdateOrderRequestBody.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 
 ### Response
 
-**[?\my_workspace\Updater\Models\Operations\UpdateOrderResponse](../../models/operations/UpdateOrderResponse.md)**
+**[?\my_workspace\Updater\Models\Operations\UpdateOrderResponse](../../Models/Operations/UpdateOrderResponse.md)**
 

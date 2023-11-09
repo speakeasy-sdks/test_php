@@ -51,12 +51,12 @@ try {
 
 | Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
 | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                            | [\my_workspace\Updater\Models\Operations\ReadDealRequest](../../models/operations/ReadDealRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| `$request`                                                                                            | [\my_workspace\Updater\Models\Operations\ReadDealRequest](../../Models/Operations/ReadDealRequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 
 ### Response
 
-**[?\my_workspace\Updater\Models\Operations\ReadDealResponse](../../models/operations/ReadDealResponse.md)**
+**[?\my_workspace\Updater\Models\Operations\ReadDealResponse](../../Models/Operations/ReadDealResponse.md)**
 
 
 ## updateDeal
@@ -111,10 +111,10 @@ try {
 
 | Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                        | [\my_workspace\Updater\Models\Operations\UpdateDealRequestBody](../../models/operations/UpdateDealRequestBody.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| `$request`                                                                                                        | [\my_workspace\Updater\Models\Operations\UpdateDealRequestBody](../../Models/Operations/UpdateDealRequestBody.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 
 ### Response
 
-**[?\my_workspace\Updater\Models\Operations\UpdateDealResponse](../../models/operations/UpdateDealResponse.md)**
+**[?\my_workspace\Updater\Models\Operations\UpdateDealResponse](../../Models/Operations/UpdateDealResponse.md)**
 
