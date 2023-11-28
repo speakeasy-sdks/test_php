@@ -48,7 +48,6 @@ src/Models/Shared/Address.php
 src/Models/Shared/ProductMoreInfo.php
 src/Models/Shared/Product.php
 src/Models/Shared/Security.php
-USAGE.md
 docs/Models/Operations/ReadDealRequest.md
 docs/Models/Operations/ReadDealResponseBody.md
 docs/Models/Operations/ReadDealResponse.md
@@ -79,4 +78,5 @@ docs/sdks/updater/README.md
 docs/sdks/deal/README.md
 docs/sdks/order/README.md
 docs/sdks/product/README.md
+USAGE.md
 .gitattributes
