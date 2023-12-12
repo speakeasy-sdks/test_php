@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 5de2514a122c5e7b9938df083447bd6c
   docVersion: 1.0.11
-  speakeasyVersion: 1.123.0
-  generationVersion: 2.202.2
+  speakeasyVersion: 1.126.0
+  generationVersion: 2.213.3
 generation:
   comments: {}
   sdkClassName: Updater
@@ -12,11 +12,11 @@ generation:
     optionalPropertyRendering: withExample
 features:
   php:
-    core: 3.1.2
-    globalSecurity: 2.81.1
+    core: 3.2.0
+    globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
 php:
-  version: 2.0.3
+  version: 2.1.0
   imports:
     option: openapi
     paths:

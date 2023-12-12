@@ -27,15 +27,13 @@ use \my_workspace\Updater\Models\Shared;
 use \my_workspace\Updater\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = Updater\Updater::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Updater\Updater::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadProductRequest();
-    $request->productId = 217234;
+        $request = new Operations\ReadProductRequest();
+    $request->productId = 217234;;
 
     $response = $sdk->product->readProduct($request);
 
@@ -76,21 +74,19 @@ use \my_workspace\Updater\Models\Shared;
 use \my_workspace\Updater\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = Updater\Updater::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Updater\Updater::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateProductRequestBody();
+        $request = new Operations\UpdateProductRequestBody();
     $request->origin = 'Magento';
     $request->product = new Shared\Product();
     $request->product->amount = 10000;
     $request->product->moreInfo = new Shared\ProductMoreInfo();
     $request->product->name = 'Bicycle';
     $request->product->productId = 'c5dec4fe-4192-4d38-a5bd-aa7bd6b86499';
-    $request->product->stock = 1000;
+    $request->product->stock = 1000;;
 
     $response = $sdk->product->updateProduct($request);
 

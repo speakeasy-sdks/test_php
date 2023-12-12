@@ -10,7 +10,7 @@ use my_workspace\Updater\Models\Shared;
 use my_workspace\Updater\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
 $sdk = Updater\Updater::builder()
     ->setSecurity($security)

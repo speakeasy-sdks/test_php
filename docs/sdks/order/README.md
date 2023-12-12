@@ -23,15 +23,13 @@ use \my_workspace\Updater\Models\Shared;
 use \my_workspace\Updater\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = Updater\Updater::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Updater\Updater::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadOrderRequest();
-    $request->orderId = 816257;
+        $request = new Operations\ReadOrderRequest();
+    $request->orderId = 816257;;
 
     $response = $sdk->order->readOrder($request);
 
@@ -72,14 +70,12 @@ use \my_workspace\Updater\Models\Shared;
 use \my_workspace\Updater\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = Updater\Updater::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Updater\Updater::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateOrderRequestBody();
+        $request = new Operations\UpdateOrderRequestBody();
     $request->order = new Shared\Order();
     $request->order->amount = 5000;
     $request->order->billingAddress = new Shared\Address();
@@ -99,7 +95,7 @@ try {
     $request->order->shippingAddress->postCode = '3510-740';
     $request->order->shippingAddress->street = 'Rua Nova, nº5, Galega';
     $request->order->state = Shared\State::Refunded;
-    $request->origin = 'Magento';
+    $request->origin = 'Magento';;
 
     $response = $sdk->order->updateOrder($request);
 

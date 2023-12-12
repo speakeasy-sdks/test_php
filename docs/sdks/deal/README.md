@@ -27,15 +27,13 @@ use \my_workspace\Updater\Models\Shared;
 use \my_workspace\Updater\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = Updater\Updater::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Updater\Updater::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ReadDealRequest();
-    $request->dealId = 259512;
+        $request = new Operations\ReadDealRequest();
+    $request->dealId = 259512;;
 
     $response = $sdk->deal->readDeal($request);
 
@@ -76,14 +74,12 @@ use \my_workspace\Updater\Models\Shared;
 use \my_workspace\Updater\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = Updater\Updater::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = Updater\Updater::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\UpdateDealRequestBody();
+        $request = new Operations\UpdateDealRequestBody();
     $request->deal = new Shared\Deal();
     $request->deal->dealId = '796945a0-b95a-4755-834e-59aa8946a2f5';
     $request->deal->maximumAmount = 10000;
@@ -95,7 +91,7 @@ try {
     $request->deal->productId = 'c5dec4fe-4192-4d38-a5bd-aa7bd6b86499';
     $request->deal->type = Shared\Type::Percentage;
     $request->deal->value = 2005;
-    $request->origin = 'Magento';
+    $request->origin = 'Magento';;
 
     $response = $sdk->deal->updateDeal($request);
 
