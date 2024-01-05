@@ -1,20 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 5de2514a122c5e7b9938df083447bd6c
-  docVersion: 1.0.11
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: Updater
-  repoURL: https://github.com/speakeasy-sdks/test_php.git
   usageSnippets:
     optionalPropertyRendering: withExample
-features:
-  php:
-    core: 3.2.0
-    globalSecurity: 2.81.2
-    globalServerURLs: 2.82.1
+  fixes:
+    nameResolutionDec2023: false
 php:
   version: 2.1.0
   imports:
@@ -26,9 +16,7 @@ php:
       shared: Models/Shared
       webhooks: Models/Webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/test_php
   maxMethodParams: 0
   namespace: my_workspace\Updater
   outputModelSuffix: output
   packageName: my-workspace/updater
-  repoSubDirectory: .
