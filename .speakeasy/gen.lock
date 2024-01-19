@@ -4,16 +4,16 @@ management:
   docChecksum: 5de2514a122c5e7b9938df083447bd6c
   docVersion: 1.0.11
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 2.1.0
-  configChecksum: af7381ae43a41870b9f9fa10a5479ab1
+  generationVersion: 2.237.2
+  releaseVersion: 2.1.1
+  configChecksum: 74ef4e65a324310d4d277a84753c8620
   repoURL: https://github.com/speakeasy-sdks/test_php.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test_php
 features:
   php:
     core: 3.3.0
-    globalSecurity: 2.81.2
+    globalSecurity: 2.81.3
     globalServerURLs: 2.82.1
 generatedFiles:
   - src/SDKConfiguration.php
