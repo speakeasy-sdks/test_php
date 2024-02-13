@@ -4,15 +4,15 @@ management:
   docChecksum: 5de2514a122c5e7b9938df083447bd6c
   docVersion: 1.0.11
   speakeasyVersion: internal
-  generationVersion: 2.237.2
-  releaseVersion: 2.1.1
-  configChecksum: 74ef4e65a324310d4d277a84753c8620
+  generationVersion: 2.253.0
+  releaseVersion: 2.1.2
+  configChecksum: cadbcf57b5211ecee641e66de966c389
   repoURL: https://github.com/speakeasy-sdks/test_php.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test_php
 features:
   php:
-    core: 3.3.0
+    core: 3.3.1
     globalSecurity: 2.81.3
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -24,6 +24,7 @@ generatedFiles:
   - src/UpdaterBuilder.php
   - composer.json
   - phpstan.neon
+  - rector.php
   - src/Utils/EnumHandler.php
   - src/Utils/FormMetadata.php
   - src/Utils/Headers.php
