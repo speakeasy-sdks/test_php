@@ -38,8 +38,7 @@ class Updater
      * @var Product $$product
      */
 	public Product $product;
-		
-	private SDKConfiguration $sdkConfiguration;
+	
 
 	/**
 	 * Returns a new instance of the SDK builder used to configure and create the SDK instance.
@@ -54,9 +53,9 @@ class Updater
 	/**
 	 * @param SDKConfiguration $sdkConfiguration
 	 */
-	public function __construct(SDKConfiguration $sdkConfiguration)
-	{
-		$this->sdkConfiguration = $sdkConfiguration;
+	public function __construct(
+		private SDKConfiguration $sdkConfiguration,
+	) {
 		
 		$this->deal = new Deal($this->sdkConfiguration);
 		

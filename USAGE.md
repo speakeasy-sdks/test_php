@@ -3,7 +3,8 @@
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use my_workspace\Updater;
 use my_workspace\Updater\Models\Shared;

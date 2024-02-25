@@ -16,7 +16,8 @@ Get the current state of a specific order.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \my_workspace\Updater;
 use \my_workspace\Updater\Models\Shared;
@@ -63,7 +64,8 @@ Update the system with the current state of a specific order.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \my_workspace\Updater;
 use \my_workspace\Updater\Models\Shared;

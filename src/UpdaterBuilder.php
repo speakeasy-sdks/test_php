@@ -16,11 +16,9 @@ namespace my_workspace\Updater;
  */
 class UpdaterBuilder
 {
-    private SDKConfiguration $sdkConfig;
-
-    public function __construct() {
-        $this->sdkConfig = new SDKConfiguration();
-    }
+    public function __construct(
+        private SDKConfiguration $sdkConfig = new SDKConfiguration(),
+    ) {}
 
     /**
      * setClient allows setting a custom Guzzle client for the SDK to make requests with.
@@ -31,6 +29,7 @@ class UpdaterBuilder
     public function setClient(\GuzzleHttp\ClientInterface $client): UpdaterBuilder
     {
         $this->sdkConfig->defaultClient = $client;
+
         return $this;
     }
     
@@ -43,6 +42,7 @@ class UpdaterBuilder
     public function setSecurity(Models\Shared\Security $security): UpdaterBuilder
     {
         $this->sdkConfig->security = $security;
+
         return $this;
     }
     
@@ -56,6 +56,7 @@ class UpdaterBuilder
     public function setServerUrl(string $serverUrl, ?array $params = null): UpdaterBuilder
     {
         $this->sdkConfig->serverUrl = Utils\Utils::templateUrl($serverUrl, $params);
+
         return $this;
     }
     
@@ -68,6 +69,7 @@ class UpdaterBuilder
     public function setServerIndex(int $serverIdx): UpdaterBuilder
     {
         $this->sdkConfig->serverIndex = $serverIdx;
+
         return $this;
     }
     
